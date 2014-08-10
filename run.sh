@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# get Saxon EE
+if [ ! -f saxon9ee.jar ]; then
+    wget http://www.saxonica.com/download/SaxonEE9-4-0-9J.zip
+    unzip SaxonEE9-4-0-9J.zip
+    rm SaxonEE9-4-0-9J.zip
+fi
+
+#
 FILES=xsd/*.xsd
 for FILE in $FILES
 do

@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Saxon EE license check
+if [ ! -f saxon-license.lic ]; then
+    echo 'You need Saxon-EE license to launch this script. See more at http://saxonica.com/download/download.xml'
+    exit 1
+fi
+
 # get Saxon EE
 if [ ! -f saxon9ee.jar ]; then
     wget http://www.saxonica.com/download/SaxonEE9-4-0-9J.zip
@@ -7,7 +13,7 @@ if [ ! -f saxon9ee.jar ]; then
     rm SaxonEE9-4-0-9J.zip
 fi
 
-#
+# transform xsd files
 FILES=xsd/*.xsd
 for FILE in $FILES
 do

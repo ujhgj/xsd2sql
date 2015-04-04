@@ -1,3 +1,6 @@
+XSD to SQL schema casting
+========
+
 How to use:
 
 1. Put xsd schema files into `xsd` folder
